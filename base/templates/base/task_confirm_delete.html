@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Буцах</a>
+</div>
+
+<div class="card-body" >
+    <form method="POST">
+        {% csrf_token %}
+        <p>"{{task}}" -ийг устгах уу?</p>
+        <input class="button" type="submit" value="Тийм"/>
+    </form>
+</div>
+{% endblock content %}

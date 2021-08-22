@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Нэвтрэх</h1>
+</div>
+
+<div class="card-body" >
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Нэвтрэх">
+    </form>
+    <p>Танд бүртгэл байхгүй юу?<a href="{% url 'register' %}">Бүртгүүлэх</a></p>
+</div>
+{% endblock content %}
